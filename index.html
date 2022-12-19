@@ -5,19 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="componentesjs/index.js"></script>
     <title>Inicio | VR PFAE Tias</title>
 </head>
 <body>
     <a-scene>
 
         <a-assets>
-           <img id="matrix-rain" src="assets/escenas/matrox.jpg" alt="matrix">
+           <img id="matrix-rain" src="assets/imagenes/escenas/matrix.jpg" alt="matrix">
         </a-assets>
         
             <a-sky src="#matrix-rain"></a-sky>
+            <a-plane position="0 0 -8" color="#CCC" height="20" width="20" material="color: #a191ac" geometry="" rotation="">
+
+                <a-text value="Bienvenido a el proyecto VR, creado por el PFAE la web de tias,  este juego consistirá en una serie de pruebas en las que tendrás que encontrar un objeto, para poder capturarlo lo unico que debes hacer es apuntar con el cursor de su pantalla a el objeto. La ultima prueba es una sorpresa pero para empezar apunta al bloque blanco de la esquina" text="width: 10.01; align: center; color: #000000; letterSpacing: 5.01; lineHeight: 100"></a-text>
+            </a-plane>
         
-            <a-plane position="" color="#CCC" height="20" width="20" material="color: #7c6a6a" geometry=""></a-plane>
          
+         
+            <a-box color="white" width="1" height="1" position="1 50 -5" class="click" mylink="href: museo.html"></a-box>
+
+
+            <a-entity camera look-controls>
+                <a-cursor raycaster="objects: .click"></a-cursor>
+            </a-entity>
+                
+            </a-camera>
     </a-scene>
     
 </body>
