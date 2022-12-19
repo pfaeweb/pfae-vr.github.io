@@ -5,24 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="componentesjs/museo.js"></script>
     <title>Museo</title>
 </head>
 <body>
     <a-scene>
         <a-assets>
             <img id="museo" src="assets/imagenes/escenas/museo.jpg" alt="museo">
+            <img id="cuadro" src="assets/imagenes/img_museo/noche.jfif" alt="cuadro estrellada">
+            <img id="cuadro1" src="assets/imagenes/img_museo/meninas.jfif" alt="cuadro de las meninas">
         </a-assets>
 
         <a-sky src="#museo" id="my-sky"></a-sky>
 
         <a-plane color="white" width="1.5" height="0.20" position="0 2 -1">
-            <a-text value="Busca un cuadro" align="center" color="black" width="2"></a-text>
+            <a-text value="Busca un cuadro de Van Gogh" align="center" color="black" width="2"></a-text>
         </a-plane>
-        <a-entity>
-            <img id="cuadro" src="" alt="cuadro">
-        </a-entity>
+
+        <a-plane width="55" height="55" position="50 150 150" src="#cuadro" rotation="60 90 90" class="click" mylink="href: pacman.html"></a-plane>
+        <a-plane width="55" height="55" position="-200 -150 -107" src="#cuadro1" rotation="0 90 0"></a-plane>
+
         <a-camera>
-            <a-cursor raycaster="object: .click"></a-cursor>
+            <a-cursor raycaster="objects: .click"></a-cursor>
         </a-camera>
     </a-scene>
 </body>
