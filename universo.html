@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <a-scene>
+        <a-assets>
+            <img id="cascada" src="img/cascada.jpg" alt="cascada">
+        </a-assets>
+
+        <a-sky src="#cascada" id="my-sky"></a-sky>
+
+        <a-plane color="white" width="1" height="0.20" position="0 2 -1">
+            <a-text value="" align="center" color="black" width="2"></a-text>
+        </a-plane>
+
+        <a-entity></a-entity>
+
+        <a-camera>
+            <a-cursor raycaster="object: .click"></a-cursor>
+        </a-camera>
+    </a-scene>
+</body>
+</html>
