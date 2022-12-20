@@ -33,6 +33,7 @@
         <a-assets>
 
             <img src="assets/imagenes/escenas/minecraft.jpg" alt="minecraft" id="minecraft">
+            <img src="assets/imagenes/diamante.png" alt="diamante-png" id="diamante-png">
             <a-asset-item id="Allay" src="assets/modelos/minecraft/allay/source/model.gltf"></a-asset-item>
             <a-asset-item id="Antorcha" src="assets/modelos/minecraft/antorcha/scene.gltf"></a-asset-item>
             <a-asset-item id="Cofre" src="assets/modelos/minecraft/cofre/scene.gltf"></a-asset-item>
@@ -50,6 +51,12 @@
         <a-entity camera look-controls>
             <a-cursor raycaster="objects: .click"></a-cursor>
         </a-entity>
+
+        <a-plane position="0 5 -8" rotation="10 0 0" color="#949494" height="5" width="10">
+            <a-text value="Enhorabuena, Has llegado al nivel 3. Bienvenido al mundo de Minecraft, para completarlo has de buscar un 
+            diamante como este. Mucha suerte." text="width: 10.01; align: center; color: #000000; letterSpacing: 3; lineHeight: 50"></a-text>
+        </a-plane>
+        <a-plane src="#diamante-png" position="0 3 -7" rotation="10 0 0" width="1" height="1" material="alphaTest: 0.5"></a-plane>
 
         <a-entity gltf-model="#Allay" position="0 5 3" rotation="0 -45 0"></a-entity>
         <a-entity gltf-model="#Antorcha" position="14.979 -12.488 -6.086"></a-entity>
