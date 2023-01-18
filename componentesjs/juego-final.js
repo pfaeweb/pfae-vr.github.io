@@ -41,9 +41,6 @@ AFRAME.registerComponent('shootable', {
             document.querySelector('[text]').setAttribute('value', `${++score} viejas rescatadas`)
             if (score === 12) {
                 document.querySelectorAll("a-text")[1].setAttribute('opacity', "1")
-                true
-            } else {
-                false
             }
         })
     }
