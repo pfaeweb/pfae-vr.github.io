@@ -39,6 +39,14 @@ AFRAME.registerComponent('shootable', {
         this.el.addEventListener('click', () => {
             this.el.parentNode.removeChild(this.el)
             document.querySelector('[text]').setAttribute('value', `${++score} viejas rescatadas`)
+            if (score === 12) {
+                console.log("hey")
+                document.querySelectorAll("a-text")[1].setAttribute('opacity', "1")
+
+                true
+            } else {
+                false
+            }
         })
     }
 })
