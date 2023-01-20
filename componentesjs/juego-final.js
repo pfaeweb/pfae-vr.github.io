@@ -34,6 +34,22 @@ function initScene() {
     })
 }
 
+// AFRAME.registerComponent('shootable', {
+//     init: function () {
+//         this.el.addEventListener('click', () => {
+//             this.el.parentNode.removeChild(this.el)
+//             document.querySelector('[text]').setAttribute('value', `${++score} / 12 viejas rescatadas`)
+//             if (score === 12) {
+//                 document.querySelectorAll("a-text")[0].setAttribute('opacity', "0.001")
+//                 document.querySelectorAll("a-text")[1].setAttribute('opacity', "1")
+//                 setTimeout(() => {
+//                     location.href = "index.html";
+//                 }, 5000);
+//             }
+//         })
+//     }
+// })
+
 AFRAME.registerComponent('shootable', {
     init: function () {
         this.el.addEventListener('click', () => {
@@ -42,9 +58,14 @@ AFRAME.registerComponent('shootable', {
             if (score === 12) {
                 document.querySelectorAll("a-text")[0].setAttribute('opacity', "0.001")
                 document.querySelectorAll("a-text")[1].setAttribute('opacity', "1")
-                setTimeout(() => {
-                    location.href = "index.html";
-                }, 5000);
+                document.querySelectorAll("a-text")[2].setAttribute('opacity', "1")
+
+                for (let i = 0; i < 5; i++) {
+                    let tiempo = 5 - [i];
+                    setTimeout(() => {
+                        document.querySelectorAll("a-text")[2].setAttribute('value', `volveras a la pantalla inicial en ${--tiempo} segundos`);
+                    }, 1000);
+                }
             }
         })
     }
