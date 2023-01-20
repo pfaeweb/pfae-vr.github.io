@@ -42,6 +42,9 @@ AFRAME.registerComponent('shootable', {
             if (score === 12) {
                 document.querySelectorAll("a-text")[0].setAttribute('opacity', "0.001")
                 document.querySelectorAll("a-text")[1].setAttribute('opacity', "1")
+                setTimeout(() => {
+                    location.href = "index.html";
+                }, 5000);
             }
         })
     }
