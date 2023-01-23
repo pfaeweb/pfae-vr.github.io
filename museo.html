@@ -18,17 +18,23 @@
 
         <a-sky src="#museo" id="my-sky"></a-sky>
 
-        <a-plane color="white" width="2" height="0.4" position="0 2 -1">
-            <a-text value="Bienvenidos al museo MIAC, en este nivel tienes que apuntar con el circulo que esta en el centro de la pantalla al cuadro 'La Noche Estrellada' de Van Gogh. Mucha suerte " align="center" color="black" width="2"></a-text>
+
+        <a-plane position="0 2 -1" color="white" height="1.2" width="2.2">
+            <a-text value=" Bienvenidos al museo MIAC, en este nivel tienes que apuntar con el circulo que esta en el centro de la pantalla al cuadro 'La Noche Estrellada' de Van Gogh. Mucha suerte
+            
+
+            Mucha suerte" text="width: 2; align: center; color: #000000; letterSpacing: 3; lineHeight: 50"></a-text>
+            <a-text value="X" text="width: 3; color: #000;" position="0.9 0.5 0" setdisplay class="click"></a-text>
         </a-plane>
+        <a-image src="#diamante-png" opacity="0.1" position="0 3 -7" rotation="10 0 0" width="1" height="1" material="alphaTest: 0.5"></a-image>
 
         <a-plane width="65" height="65" position="-200 150 320" src="#cuadro" rotation="0 90 0" class="click" mylink="href: pacman.html"></a-plane>
 
         <a-plane width="55" height="55" position="-200 -150 -107" src="#cuadro1" rotation="0 90 0"></a-plane>
 
         <a-camera>
-            <a-cursor raycaster="objects: .click"></a-cursor>
-        </a-camera>
+            <a-cursor raycaster="objets: .click"></a-cursor>
+       </a-camera>
     </a-scene>
 </body>
 </html>
