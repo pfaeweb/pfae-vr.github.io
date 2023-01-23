@@ -61,14 +61,14 @@ AFRAME.registerComponent('shootable', {
                 document.querySelectorAll("a-text")[2].setAttribute('opacity', "1")
 
                 for (let i = 5; i >= 0; i--) {
-                    console.log(i);
                     setTimeout(function timer() {
-                        document.querySelectorAll("a-text")[2].setAttribute('value', `volveras a la pantalla inicial en ${i} segundos`);
-                        
+                        document.querySelectorAll("a-text")[2].setAttribute('value', `volveras a la pantalla inicial en ${i} / 5 segundos`);
                     }, i * 1000);
+                    setTimeout(() => {
+                        location.href = "index.html";
+                    }, 5000);
                 }
-
-               
+                
             }
         })
     }
