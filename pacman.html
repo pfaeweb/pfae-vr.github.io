@@ -15,18 +15,18 @@
             <img src="assets/imagenes/ghost.png" alt="" id="fantasma">
         </a-assets>
         <a-sky src="#pacman" id="my-sky"></a-sky>
-        <a-plane position="0 5 -8" rotation="10 0 0" color="#949494" height="5" width="10">
+        <a-plane position="0 5 -8" rotation="10 0 0" color="#949494" height="6.5" width="11.5">
             <a-text value="Enhorabuena, has llegado al nivel 2. 
             Bienvenido al mundo Pacman. 
-            Para completarlo tienes que buscar un fantasma como el que se muestra y apuntarlo para pasar al siguiente mundo.
+            Para completarlo tienes que buscar un fantasma como el que se muestra y apuntarlo para pasar al siguiente mundo. (Para cerrar la ventana de ayuda, mira la 'X')
             
 
             Mucha suerte" text="width: 10.01; align: center; color: #000000; letterSpacing: 3; lineHeight: 50"></a-text>
-            <a-text value="X" text="width: 10; color: #000;" position="4.199 1.934 0.061" setdisplay class="click"></a-text>
+            <a-text value="X" text="width: 10; color: #000;" position="4.752 2.241 0.007" setdisplay class="click"> </a-text>
         </a-plane>
         
        <a-plane src="#fantasma" width="5" height="3" position="63.82 310.05 -37.29"  rotation="25.510 -64.04 -26.89" scale="6.92 7.02 2" material="alphaTest: 0.5" class="click"  mylink="href: minecraft.html" ></a-plane>   
-       <a-image src="#fantasma" width="1" height="1" position="0.009 3.315 -5.93" rotation="-2.95 31.30 2.0" scale="1.56 0.9 2.0" material="alphaTest: 0.5"></a-image>
+       <a-image src="#fantasma" width="1" height="1" position="-0.031 3.08 -5.99" rotation="-2.95 31.30 2.0" scale="1.56 0.9 2.0" material="alphaTest: 0.5"></a-image>
        <a-camera>
             <a-cursor raycaster="objets: .click" color="white"></a-cursor>
        </a-camera>
