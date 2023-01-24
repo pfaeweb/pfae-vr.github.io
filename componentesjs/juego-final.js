@@ -34,22 +34,6 @@ function initScene() {
     })
 }
 
-// AFRAME.registerComponent('shootable', {
-//     init: function () {
-//         this.el.addEventListener('click', () => {
-//             this.el.parentNode.removeChild(this.el)
-//             document.querySelector('[text]').setAttribute('value', `${++score} / 12 viejas rescatadas`)
-//             if (score === 12) {
-//                 document.querySelectorAll("a-text")[0].setAttribute('opacity', "0.001")
-//                 document.querySelectorAll("a-text")[1].setAttribute('opacity', "1")
-//                 setTimeout(() => {
-//                     location.href = "index.html";
-//                 }, 5000);
-//             }
-//         })
-//     }
-// })
-
 AFRAME.registerComponent('shootable', {
     init: function () {
         this.el.addEventListener('click', () => {
@@ -59,16 +43,9 @@ AFRAME.registerComponent('shootable', {
                 document.querySelectorAll("a-text")[0].setAttribute('opacity', "0.001")
                 document.querySelectorAll("a-text")[1].setAttribute('opacity', "1")
                 document.querySelectorAll("a-text")[2].setAttribute('opacity', "1")
-
-                for (let i = 5; i >= 0; i--) {
-                    setTimeout(function timer() {
-                        document.querySelectorAll("a-text")[2].setAttribute('value', `volveras a la pantalla inicial en ${i} / 5 segundos`);
-                    }, i * 1000);
-                    setTimeout(() => {
-                        location.href = "index.html";
-                    }, 5000);
-                }
-                
+                setTimeout(() => {
+                    location.href = "index.html";
+                }, 5000);
             }
         })
     }
